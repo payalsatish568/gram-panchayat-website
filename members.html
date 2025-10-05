@@ -24,108 +24,109 @@
 
   <main class="members">
     <h2>ग्रामपंचायत सदस्यांची माहिती (Members Information)</h2>
-
-    <div class="member-container">
-      <!-- Sarpanch -->
-      <div class="member-card">
-        <img src="assets/images/members/sarpanch.jpg" alt="सरपंच">
-        <h3>श्री. सुहास रामचंद्र शेंडे</h3>
-        <p>सरपंच</p>
-        <p class="muted">मो. ९८८१८७८८५५</p>
-      </div>
-
-      <!-- Upsarpanch -->
-      <div class="member-card">
-        <img src="assets/images/members/upsarpanch.jpg" alt="उपसरपंच">
-        <h3>सौ. रंजना अशोक जाधव</h3>
-        <p>उपसरपंच</p>
-        <p class="muted">मो. ९७६७३१३५३५</p>
-      </div>
-
-      <!-- Officer -->
-      <div class="member-card">
-        <img src="assets/images/members/gramsevak.jpg" alt="ग्रामपंचायत अधिकारी">
-        <h3>श्री. विजय महादेव कुदळे</h3>
-        <p>ग्रामपंचायत अधिकारी</p>
-        <p class="muted">मो. ९६२३२५०९८४</p>
-      </div>
-
-      <div class="member-card">
-        <img src="assets\images\members\gatvikas_adikari_2.jpg" alt="गटविकास अधिकारी पंचायत समिती मुळशी">
-        <h3>श्री. सुधीर भागवत </h3>
-        <p>गटविकास अधिकारी पंचायत समिती मुळशी</p>
-        
-      </div>
-
-      <div class="member-card">
-        <img src="assets\images\members\gatvikas_adikari.jpg" alt="सहायक गटविकास अधिकारी पं स मुळशी">
-        <h3>श्री. दत्तात्रय भालेराव</h3>
-        <p>सहायक गटविकास अधिकारी पं स मुळशी</p>
-        
-      </div>
-
-      <div class="member-card">
-        <img src="assets\images\members\vistar_adikari.jpg" alt="विस्तार अधिकारी पंचायत मुळशी">
-        <h3>श्री. एम पी चव्हाण</h3>
-        <p>विस्तार अधिकारी पंचायत मुळशी</p>
-       
-      </div>
-
-      <!-- Other members (use your filenames) -->
-      <div class="member-card">
-        <img src="assets/images/members/sadsya_navnath.jpg" alt="नवनाथ नलावडे">
-        <h3>श्री. नवनाथ धोडिबां नलावडे</h3>
-        <p>सदस्य</p>
-      </div>
-
-      <div class="member-card">
-        <img src="assets/images/members/sadsya_chetan.jpg" alt="चेतन आधारे">
-        <h3>श्री. चेतन राजेंद्र आधारे</h3>
-        <p>सदस्य</p>
-      </div>
-
-      <div class="member-card">
-        <img src="assets\images\members\sadasya_genu.jpg" alt="गेणु पवार">
-        <h3>श्री. गेणु कोडिंबा पवार</h3>
-        <p>सदस्य</p>
-      </div>
-
-      <div class="member-card">
-        <img src="assets/images/members/sadsya_datatrya.jpg" alt="दत्तात्रेय पोकळे">
-        <h3>श्री. दत्तात्रेय कोडिंबा पोकळे</h3>
-        <p>सदस्य</p>
-      </div>
-
-      <div class="member-card">
-        <img src="assets\images\members\sadasya_alpna.jpg" alt="अल्पना कोंडेकर">
-        <h3>सौ. अल्पना सुभाष कोंडेकर</h3>
-        <p>सदस्य</p>
-      </div>
-
-      <div class="member-card">
-        <img src="assets/images/members/sadsya_jyoti.jpg" alt="ज्योती गोपालघरे">
-        <h3>सौ. ज्योती संतोष गोपालघरे</h3>
-        <p>सदस्य</p>
-      </div>
-
-      <div class="member-card">
-        <img src="assets/images/members/sadsya_komal.jpg" alt="कोमल ढेबे">
-        <h3>सौ. कोमल अंकुश ढेबे</h3>
-        <p>सदस्य</p>
-      </div>
-
-     <div class="member-card">
-        <img src="assets\images\members\gram_karmchari_amrut.jpg" alt="अमृत केदारी">
-        <h3>श्री. अमृत केदारी</h3>
-        <p>ग्रां पं कर्मचारी</p>
-      </div>
+    <div class="login-control">
+      <button id="loginBtn">🔐 ग्रामसेवक लॉगिन</button>
+      <button id="logoutBtn" style="display:none;">🚪 लॉगआऊट</button>
     </div>
+
+    <div class="member-container" id="memberContainer"></div>
   </main>
 
   <footer>
     <p>© २०२५ ग्रामपंचायत माले</p>
   </footer>
 
-  <script src="assets/js/main.js"></script>
+  <script>
+    // 🧠 Member Data
+    const members = [
+      { name: "श्री. सुहास रामचंद्र शेंडे", post: "सरपंच", phone: "९८८१८७८८५५", photo: "assets/images/members/sarpanch.jpg" },
+      { name: "सौ. रंजना अशोक जाधव", post: "उपसरपंच", phone: "९७६७३१३५३५", photo: "assets/images/members/upsarpanch.jpg" },
+      { name: "श्री. विजय महादेव कुदळे", post: "ग्रामपंचायत अधिकारी", phone: "९६२३२५०९८४", photo: "assets/images/members/gramsevak.jpg" },
+      { name: "श्री. सुधीर भागवत", post: "गटविकास अधिकारी पंचायत समिती मुळशी", photo: "assets/images/members/gatvikas_adikari_2.jpg" },
+      { name: "श्री. दत्तात्रय भालेराव", post: "सहायक गटविकास अधिकारी पं स मुळशी", photo: "assets/images/members/gatvikas_adikari.jpg" },
+      { name: "श्री. एम पी चव्हाण", post: "विस्तार अधिकारी पंचायत मुळशी", photo: "assets/images/members/vistar_adikari.jpg" },
+      { name: "श्री. नवनाथ धोडिबां नलावडे", post: "सदस्य", photo: "assets/images/members/sadsya_navnath.jpg" },
+      { name: "श्री. चेतन राजेंद्र आधारे", post: "सदस्य", photo: "assets/images/members/sadsya_chetan.jpg" },
+      { name: "श्री. गेणु कोडिंबा पवार", post: "सदस्य", photo: "assets/images/members/sadasya_genu.jpg" },
+      { name: "श्री. दत्तात्रेय कोडिंबा पोकळे", post: "सदस्य", photo: "assets/images/members/sadsya_datatrya.jpg" },
+      { name: "सौ. अल्पना सुभाष कोंडेकर", post: "सदस्य", photo: "assets/images/members/sadasya_alpna.jpg" },
+      { name: "सौ. ज्योती संतोष गोपालघरे", post: "सदस्य", photo: "assets/images/members/sadsya_jyoti.jpg" },
+      { name: "सौ. कोमल अंकुश ढेबे", post: "सदस्य", photo: "assets/images/members/sadsya_komal.jpg" },
+      { name: "श्री. अमृत केदारी", post: "ग्रां पं कर्मचारी", photo: "assets/images/members/gram_karmchari_amrut.jpg" }
+    ];
+
+    // 🧰 Render Members
+    function renderMembers() {
+      const container = document.getElementById("memberContainer");
+      const isAdmin = localStorage.getItem("isAdmin") === "true";
+      container.innerHTML = "";
+
+      members.forEach((m, i) => {
+        container.innerHTML += `
+          <div class="member-card">
+            <img src="${m.photo}" alt="${m.name}">
+            <h3>${m.name}</h3>
+            <p>${m.post}</p>
+            ${m.phone ? `<p class="muted">मो. ${m.phone}</p>` : ""}
+            ${isAdmin ? `
+              <div class="admin-btns">
+                <button onclick="editMember(${i})">✏️ संपादित करा</button>
+                <button onclick="deleteMember(${i})">🗑️ हटवा</button>
+              </div>
+            ` : ""}
+          </div>`;
+      });
+    }
+
+    // 📝 Edit Member
+    function editMember(index) {
+      const newName = prompt("नवीन नाव लिहा:", members[index].name);
+      const newPost = prompt("नवीन पद लिहा:", members[index].post);
+      if (newName && newPost) {
+        members[index].name = newName;
+        members[index].post = newPost;
+        renderMembers();
+      }
+    }
+
+    // ❌ Delete Member
+    function deleteMember(index) {
+      if (confirm("हा सदस्य हटवायचा आहे का?")) {
+        members.splice(index, 1);
+        renderMembers();
+      }
+    }
+
+    // 🔐 Login / Logout Logic
+    document.getElementById("loginBtn").addEventListener("click", () => {
+      const username = prompt("वापरकर्त्याचे नाव लिहा:");
+      const password = prompt("पासवर्ड लिहा:");
+
+      if (username === "gramsevak" && password === "1234") {
+        alert("लॉगिन यशस्वी ✅");
+        localStorage.setItem("isAdmin", "true");
+        document.getElementById("loginBtn").style.display = "none";
+        document.getElementById("logoutBtn").style.display = "inline-block";
+        renderMembers();
+      } else {
+        alert("चुकीचे नाव किंवा पासवर्ड ❌");
+      }
+    });
+
+    document.getElementById("logoutBtn").addEventListener("click", () => {
+      localStorage.removeItem("isAdmin");
+      alert("लॉगआऊट यशस्वी");
+      document.getElementById("loginBtn").style.display = "inline-block";
+      document.getElementById("logoutBtn").style.display = "none";
+      renderMembers();
+    });
+
+    // Initialize
+    if (localStorage.getItem("isAdmin") === "true") {
+      document.getElementById("loginBtn").style.display = "none";
+      document.getElementById("logoutBtn").style.display = "inline-block";
+    }
+    renderMembers();
+  </script>
 </body>
 </html>
