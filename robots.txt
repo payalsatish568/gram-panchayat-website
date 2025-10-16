@@ -1,0 +1,5 @@
+# robots.txt for Gram Panchayat Male website
+User-agent: *
+Allow: /
+
+Sitemap: https://malegrampanchyat.netlify.app/sitemap.xml
