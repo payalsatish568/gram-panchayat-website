@@ -2,38 +2,105 @@
 <html lang="mr">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>सूचना — Notices</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>सूचना | ग्रामपंचायत माले</title>
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-  <header>
-    <div class="brand">
-      <img src="assets/images/village/grampanchyat.jpg" alt="logo" class="brand-img">
-      <h1>ग्रामपंचायत माले</h1>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="index.html">मुख्यपृष्ठ</a></li>
-        <li><a href="news.html">बातम्या</a></li>
-        <li><a href="notices.html" class="active">सूचना</a></li>
-        <li><a href="contact.html">संपर्क</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main class="content">
-    <h2>नोटिस व निविदा (Notices & Tenders)</h2>
+<header>
+  <div class="brand">
+    <img src="assets/images/village/grampanchyat.jpg" alt="logo" class="brand-img">
+    <h1>ग्रामपंचायत माले</h1>
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">मुख्यपृष्ठ</a></li>
+      <li><a href="news.html">बातम्या</a></li>
+      <li><a href="notices.html" class="active">सूचना</a></li>
+      <li><a href="contact.html">संपर्क</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="content">
+
+  <h2>सूचना व सार्वजनिक दस्तऐवज</h2>
+
+  <p>
+    ग्रामपंचायत माले येथील आर्थिक अहवाल, सार्वजनिक माहिती,
+    तसेच माहिती अधिकार अंतर्गत आवश्यक कागदपत्रे खाली उपलब्ध आहेत.
+  </p>
+
+  <!-- सामान्य सूचना -->
+  <section class="notice-section">
+    <h3>महत्वाच्या सूचना</h3>
 
     <ul class="info-list">
-      <li>नवीन कर संकलन यादी — <a href="assets/docs/notice-1.pdf" target="_blank">डाउनलोड करा (PDF)</a></li>
       <li>ग्रामसभा आयोजन — दिनांक १२ ऑक्टोबर २०२५, संध्याकाळी ५ वाजता</li>
+      <li>नवीन कर संकलन यादी —
+        <a href="assets/docs/notice-1.pdf" target="_blank">
+          डाउनलोड करा (PDF)
+        </a>
+      </li>
     </ul>
-  </main>
+  </section>
 
-  <footer>
-    <p>© २०२५ ग्रामपंचायत माले</p>
-  </footer>
-  <script src="assets/js/main.js"></script>
+  <!-- आर्थिक अहवाल -->
+  <section class="notice-section">
+
+    <h3>आर्थिक अहवाल</h3>
+
+    <div class="notice-card">
+      <h4>जमा खर्च अहवाल — १५ वा वित्त आयोग</h4>
+      <p>सन २०२४-२५ आर्थिक वर्षाचा खर्च व उत्पन्न अहवाल</p>
+
+      <a href="assets/docs/जमा खर्च १५ वित्त आयोग.pdf"
+         target="_blank"
+         class="btn">
+         PDF पहा / डाउनलोड करा
+      </a>
+    </div>
+
+    <div class="notice-card">
+      <h4>जमा खर्च अहवाल — ग्राम निधी</h4>
+      <p>ग्रामपंचायत ग्राम निधी आर्थिक तपशील</p>
+
+      <a href="assets/docs/जमा खर्च ग्राम निधी.pdf"
+         target="_blank"
+         class="btn">
+         PDF पहा / डाउनलोड करा
+      </a>
+    </div>
+
+  </section>
+
+  <!-- माहिती अधिकार -->
+  <section class="notice-section">
+
+    <h3>माहिती अधिकार</h3>
+
+    <div class="notice-card">
+      <h4>माहिती अधिकार २००५ अंतर्गत नियम</h4>
+      <p>नियम ४ ते १५ मुद्द्यांनुसार आवश्यक माहिती</p>
+
+      <a href="assets/docs/माहिती अधिकार ४ ते १५ मुद्दे.pdf"
+         target="_blank"
+         class="btn">
+         PDF पहा / डाउनलोड करा
+      </a>
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+  <p>© २०२५ ग्रामपंचायत माले | सर्व हक्क राखीव</p>
+</footer>
+
+<script src="assets/js/main.js"></script>
+
 </body>
 </html>
